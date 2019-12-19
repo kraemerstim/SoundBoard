@@ -1,14 +1,18 @@
 #include "Button.h"
 
 const int ButtonDelay = 500;
-const int ButtonSize = 6;
+const int ButtonSize = 10;
 Button buttons[ButtonSize] = {
     Button(0, 2),
     Button(1, 3),
     Button(2, 4),
     Button(3, 5),
     Button(4, 6),
-    Button(5, 7)
+    Button(5, 7),
+    Button(6, 8),
+    Button(7, 9),
+    Button(8, 10),
+    Button(9, 11)
   };
 
 void setup() {
@@ -25,7 +29,7 @@ void setup() {
 }
 
 void sendButtonPressed(int pressedID) {
-  Serial.print("Gedrückt: ");
+  Serial.print("Sound-");
   Serial.println(pressedID);
 }
 

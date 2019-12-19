@@ -24,7 +24,7 @@ serial = serial.Serial("/dev/ttyUSB0", 9600)
 
 while 1:
     serial_input = str(serial.readline(), 'UTF-8').rstrip('\r\n')
-    if (serial_input[:-2] == 'Gedrückt:'):
-        sound_index = int(serial_input[-1:])
+    if (serial_input.startswith'Sound-'):
+        sound_index = int(serial_input[6:])
         if (sound_index < len(sounds)):
             playSound(sounds[sound_index])
